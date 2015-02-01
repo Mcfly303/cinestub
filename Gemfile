@@ -5,6 +5,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.0.beta4'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
+
+#add production gem pg to work with heroku setup
 group :development, :test do
 	gem 'sqlite3', '1.3.8'
 	gem 'rspec-rails', '2.13.1'
