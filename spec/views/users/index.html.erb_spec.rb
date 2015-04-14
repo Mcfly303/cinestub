@@ -5,16 +5,16 @@ describe "users/index" do
     assign(:users, [
       stub_model(User,
         :name => "Name",
-        :email => "Email",
         :username => "Username",
+        :email => "Email",
         :password => "Password",
         :age => 1,
         :gender => "Gender"
       ),
       stub_model(User,
         :name => "Name",
-        :email => "Email",
         :username => "Username",
+        :email => "Email",
         :password => "Password",
         :age => 1,
         :gender => "Gender"
@@ -26,8 +26,8 @@ describe "users/index" do
     render
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "tr>td", :text => "Name".to_s, :count => 2
-    assert_select "tr>td", :text => "Email".to_s, :count => 2
     assert_select "tr>td", :text => "Username".to_s, :count => 2
+    assert_select "tr>td", :text => "Email".to_s, :count => 2
     assert_select "tr>td", :text => "Password".to_s, :count => 2
     assert_select "tr>td", :text => 1.to_s, :count => 2
     assert_select "tr>td", :text => "Gender".to_s, :count => 2
